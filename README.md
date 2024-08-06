@@ -71,6 +71,7 @@ To customize GPU utilization, add a `run.ai/simulated-gpu-utilization` annotatio
 For example, add `run.ai/simulated-gpu-utilization: 10-30` to simulate a pod that utilizes between 10% and 30% of the GPU.
 
 For prometheus:
+```sh
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
@@ -89,3 +90,4 @@ spec:
   namespaceSelector:
     matchNames:
     - gpu-operator
+```
