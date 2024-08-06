@@ -69,3 +69,23 @@ By default, the DCGM exporter will report maximum GPU utilization for every pod 
 
 To customize GPU utilization, add a `run.ai/simulated-gpu-utilization` annotation to the pod with a value representing the desired range of GPU utilization.
 For example, add `run.ai/simulated-gpu-utilization: 10-30` to simulate a pod that utilizes between 10% and 30% of the GPU.
+
+For prometheus:
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: nvidia-dcgm-export
+  namespace: gpu-operator
+  labels:
+    app: nvidia-dcgm-exporter
+spec:
+  jobLabel: nvidia-gpu
+  endpoints:
+    - port: gpu-metrics
+      interval: 15s
+  selector:
+    matchLabels:
+      app: nvidia-dcgm-exporter
+  namespaceSelector:
+    matchNames:
+    - gpu-operator
