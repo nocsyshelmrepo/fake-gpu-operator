@@ -5,7 +5,7 @@ devicePlugin:
   image:
     pullPolicy: Always
     repository: gcr.io/run-ai-staging/fake-gpu-operator/device-plugin
-    tag: 0.0.1
+    tag: 0.0.53
   resources: 
     requests:
       cpu: "100m"
@@ -18,7 +18,7 @@ statusUpdater:
   image:
     pullPolicy: Always
     repository: gcr.io/run-ai-staging/fake-gpu-operator/status-updater
-    tag: 0.0.1
+    tag: 0.0.53
   resources: 
     requests:
       cpu: "200m"
@@ -31,7 +31,7 @@ topologyServer:
   image:
     pullPolicy: Always
     repository: gcr.io/run-ai-staging/fake-gpu-operator/topology-server
-    tag: 0.0.1
+    tag: 0.0.53
   resources: 
     requests:
       cpu: "100m"
@@ -44,7 +44,7 @@ statusExporter:
   image:
     pullPolicy: Always
     repository: gcr.io/run-ai-staging/fake-gpu-operator/status-exporter
-    tag: 0.0.1
+    tag: 0.0.53
   resources: 
     requests:
       cpu: "100m"
@@ -58,7 +58,7 @@ migFaker:
   image:
     pullPolicy: Always
     repository: gcr.io/run-ai-staging/fake-gpu-operator/mig-faker
-    tag: 0.0.1
+    tag: 0.0.53
 
 topology:
   # nodePools is a map of node pool name to node pool configuration.
