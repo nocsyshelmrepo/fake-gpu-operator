@@ -33,5 +33,5 @@ spec:
               containerPort: 8080
       restartPolicy: Always
       serviceAccountName: topology-server
-      imagePullSecrets:
-        - name: gcr-secret
+      # imagePullSecrets:
+      #  - name: gcr-secret

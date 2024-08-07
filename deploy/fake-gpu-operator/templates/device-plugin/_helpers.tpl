@@ -59,8 +59,8 @@ tolerations:
   - effect: NoSchedule
     key: nvidia.com/gpu
     operator: Exists
-imagePullSecrets:
-  - name: gcr-secret
+# imagePullSecrets:
+#  - name: gcr-secret
 volumes:
   - hostPath:
       path: /var/lib/kubelet/device-plugins

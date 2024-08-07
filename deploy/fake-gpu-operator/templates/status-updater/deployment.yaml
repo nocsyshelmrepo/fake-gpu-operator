@@ -35,5 +35,5 @@ spec:
               value: "{{ .Release.Namespace }}"
       restartPolicy: Always
       serviceAccountName: status-updater
-      imagePullSecrets:
-        - name: gcr-secret
+      # imagePullSecrets:
+      #  - name: gcr-secret

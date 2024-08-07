@@ -51,8 +51,8 @@ tolerations:
   - effect: NoSchedule
     key: nvidia.com/gpu
     operator: Exists
-imagePullSecrets:
-  - name: gcr-secret
+# imagePullSecrets:
+#  - name: gcr-secret
 volumes:
   - name: runai-proc-directory
     hostPath:

@@ -23,5 +23,5 @@ spec:
             - sleep
             - infinity
       restartPolicy: Always
-      imagePullSecrets:
-        - name: gcr-secret
+      # imagePullSecrets:
+      #  - name: gcr-secret

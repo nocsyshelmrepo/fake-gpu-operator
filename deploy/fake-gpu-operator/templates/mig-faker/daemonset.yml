@@ -45,6 +45,6 @@ spec:
       restartPolicy: Always
       serviceAccountName: mig-faker
       terminationGracePeriodSeconds: 30
-      imagePullSecrets:
-        - name: gcr-secret
+      # imagePullSecrets:
+      #  - name: gcr-secret
       
