@@ -15,4 +15,4 @@ spec:
       app: nvidia-dcgm-exporter
   namespaceSelector:
     matchNames:
-    - gpu-operator
+    - {{ .Release.Namespace }}
